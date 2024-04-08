@@ -9,7 +9,7 @@ return [
     /**
      * Here you can specify the path to redirect to after verification.
      */
-    'redirect_to' => '/home',
+    'redirect_to' => '/dashboard',
 
     /**
      * Whether to login the user after successfully verifying its email.
