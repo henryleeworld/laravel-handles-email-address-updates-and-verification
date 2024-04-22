@@ -1,4 +1,4 @@
-# Laravel 10 處理電子郵件地址更新和驗證
+# Laravel 11 處理電子郵件地址更新和驗證
 
 引入 protonemedia 的 laravel-verify-new-email 套件來擴增處理電子郵件地址更新和驗證，當使用者更新其電子郵件地址時，在驗證新電子郵件地址之前，不會取代舊電子郵件地址。
 
@@ -20,14 +20,18 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate
 ```
+- 執行 __Artisan__ 指令的 __queue:work__ 來處理被推送進隊列內的新任務。
+```sh
+$ php artisan queue:work
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/oXMy4oI.png)
+![](https://i.imgur.com/5o8oplG.png)
 > 建立新的帳號
 
-![](https://i.imgur.com/63aBntx.png)
+![](https://i.imgur.com/kipm7DR.png)
 > 到註冊填寫的電子郵件地址收信，並啟動註冊的帳號，才算開通帳號

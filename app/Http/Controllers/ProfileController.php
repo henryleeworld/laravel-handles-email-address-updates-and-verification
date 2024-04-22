@@ -30,6 +30,8 @@ class ProfileController extends Controller
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
+            $request->user()->newEmail($request->user()->email);
+            $request->user()->syncOriginalAttribute('email');
         }
 
         $request->user()->save();
