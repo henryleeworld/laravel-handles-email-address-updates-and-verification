@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pending_user_emails', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->id();
             $table->morphs('user');
             $table->string('email')->index();
             $table->string('token');
